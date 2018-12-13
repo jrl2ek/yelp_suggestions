@@ -25,7 +25,7 @@ SECRET_KEY = '_6yl*gv4hfn@$&#%buisjmkp8sih7x9%6*3mewk3tbri*0ws91'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [demo-yelp-suggestions.herokuapp.com]
+ALLOWED_HOSTS = ["demo-yelp-suggestions.herokuapp.com"]
 
 
 # Application definition
