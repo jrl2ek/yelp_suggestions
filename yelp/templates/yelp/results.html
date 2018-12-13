@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="content" style="text-align: center;padding-top: 100px" id="main">
+<h1>Welcome {{ user }} Below is a list of {{ restaurant }} Restaurants you might enjoy!</h1>
+
+<h3>If you see a restaurant you like click to see similar!</h3>
+<table align="center">
+    <tr>
+    <th>Restaurant</th>
+
+    </tr>
+    {% for rest in restaurants %}
+    <tr>
+
+
+      <td><a href="/yelp/compare/?val={{ rest.restaurant }}"> {{ rest.restaurant }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</body>
+</html>

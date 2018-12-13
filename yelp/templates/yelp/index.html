@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-image:linear-gradient(lightskyblue, white); background-repeat: no-repeat ">
+
+<div class="content" style="text-align: center;padding-top: 100px" id="main">
+<h3 style="font-size: 300%">Welcome to Food Finder, where we give you the places you'd be most interested in!</h3>
+<div style="text-align: center;padding-top: 10px; font-size: 200%" id="cleveland">
+    <h3>Cleveland Restaurants</h3>
+</div>
+<div style="text-align: center; font-size: 120%">
+<form action="{% url 'results' %}" method="post">
+    {% csrf_token %}
+    <label for="yelp_people">Who Are You?</label>
+    <select name="yelp_people" id="yelp_people">
+    {% for user in yelp_user_list %}
+        <option value="{{ user.yelp_id }}">{{ user.name }}</option>
+
+    {% endfor %}
+    </select>
+    <br>
+    <br>
+    <label for="restaurant">Please Enter A Type of Food you are looking for!</label>
+    <select name="restaurant" id="restaurant">
+    {% for cat in yelp_cats_list %}
+        <option value="{{ cat.yelp_name }}">{{ cat.name }}</option>
+
+    {% endfor %}
+    </select>
+    <br>
+    <br>
+    <input style="height: 55px;width: 110px;background-color: deepskyblue" type="submit"  value="Find Food">
+</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1>Based on user reviews people were also interested in this places similar to {{ restaurant }}</H1>
+{% for rest in restaurants %}
+    <h5>{{ rest }}</h5>
+{% endfor %}
+</body>
+</html>
