@@ -15,7 +15,7 @@ from .models import YelpUsers, YelpCategories, Restaurants, YelpCombo, Combine
 
 #tot_info1 = pd
 #reviews_matrix1 = pd
-reader = Reader(rating_scale=(0.5, 5.0))
+#reader = Reader(rating_scale=(0.5, 5.0))
 
 # Create your views here.
 def index(request):
