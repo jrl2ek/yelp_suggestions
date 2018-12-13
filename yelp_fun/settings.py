@@ -25,7 +25,7 @@ SECRET_KEY = '_6yl*gv4hfn@$&#%buisjmkp8sih7x9%6*3mewk3tbri*0ws91'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["demo-yelp-suggestions.herokuapp.com"]
+ALLOWED_HOSTS = ["demo-yelp-suggestions.herokuapp.com", "127.0.0.1"]
 
 
 # Application definition
@@ -80,6 +80,10 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+import dj_database_url
+
+db_from_env = dj_database_url.config()
 
 
 # Password validation
