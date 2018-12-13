@@ -2,9 +2,9 @@
 from __future__ import unicode_literals
 from django.http import HttpResponse
 #import pandas as pd
-import json
-from surprise import SVD, evaluate
-from surprise import Reader, Dataset
+#import json
+#from surprise import SVD, evaluate
+#from surprise import Reader, Dataset
 import random
 
 from django.shortcuts import render
