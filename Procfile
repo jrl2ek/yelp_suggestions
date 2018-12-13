@@ -1,0 +1,1 @@
+web: gunicorn yelp_fun.wsgi --log-file -
