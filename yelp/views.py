@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.http import HttpResponse
-import pandas as pd
+#import pandas as pd
 import json
 from surprise import SVD, evaluate
 from surprise import Reader, Dataset
@@ -13,8 +13,8 @@ from django.template import loader
 from .models import YelpUsers, YelpCategories, Restaurants, YelpCombo, Combine
 
 
-tot_info1 = pd
-reviews_matrix1 = pd
+#tot_info1 = pd
+#reviews_matrix1 = pd
 reader = Reader(rating_scale=(0.5, 5.0))
 
 # Create your views here.
